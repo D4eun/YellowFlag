@@ -20,6 +20,7 @@
         <activity android:name=".Address2Activity" />
         <activity android:name=".AddressActivity" />
         <activity android:name=".NaverMapActivity" />
+        <activity android:name=".NaverMapActivity2" />
         <activity android:name=".Chat.MessageActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashActivity">
