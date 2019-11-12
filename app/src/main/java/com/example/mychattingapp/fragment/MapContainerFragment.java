@@ -19,6 +19,7 @@ import android.widget.Button;
 
 import com.example.mychattingapp.Chat.MessageActivity;
 import com.example.mychattingapp.NaverMapActivity;
+import com.example.mychattingapp.NaverMapActivity2;
 import com.example.mychattingapp.R;
 import com.example.mychattingapp.data.TourlistData;
 import com.google.firebase.database.DataSnapshot;
@@ -69,7 +70,7 @@ public class MapContainerFragment extends Fragment {private FusedLocationSource 
         mapbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), NaverMapActivity.class);
+                Intent intent = new Intent(view.getContext(), NaverMapActivity2.class);
                 ActivityOptions activityOptions = null;
                 activityOptions = ActivityOptions.makeCustomAnimation(view.getContext(), R.anim.fromright, R.anim.toleft);
                 startActivity(intent, activityOptions.toBundle());

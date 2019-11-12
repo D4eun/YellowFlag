@@ -28,7 +28,7 @@ import java.util.List;
 public class AfterActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-
+    ArrayList<AfterModel> models = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,12 @@ public class AfterActivity extends AppCompatActivity {
         FirebaseDatabase.getInstance().getReference().child("users").child("after").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS));
-                recyclerView.setAdapter(new afterrecyclerviewAdapter());
+                for(DataSnapshot ds : dataSnapshot.getChildren()) {
+                    models.add(ds.getValue(AfterModel.class));
+
+                }
+                recyclerView.setLayoutManager(new LinearLayoutManager(AfterActivity.this));
+                recyclerView.setAdapter(new afterrecyclerviewAdapter(models));
             }
 
             @Override
@@ -52,11 +56,12 @@ public class AfterActivity extends AppCompatActivity {
             }
         });
     }
+
     class afterrecyclerviewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         private List<AfterModel> afterModels = new ArrayList<>();
 
-        public afterrecyclerviewAdapter(){
-
+        public afterrecyclerviewAdapter(ArrayList<AfterModel> models) {
+            afterModels = models;
         }
 
         @NonNull
@@ -69,7 +74,12 @@ public class AfterActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-            AfterviewHolder afterviewHolder= ((AfterviewHolder)holder);
+            final AfterModel data = afterModels.get(position);
+
+            AfterviewHolder afterviewHolder = ((AfterviewHolder) holder);
+
+            afterviewHolder.aftername.setText(data.aftername);
+            afterviewHolder.afterfavor.setText(data.afterfavor);
         }
 
         @Override

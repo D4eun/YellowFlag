@@ -7,6 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class TourAccessUserAdapter extends RecyclerView.Adapter<TourAccessUserAdapter.ViewHolder> {
+
+
     @NonNull
     @Override
     public TourAccessUserAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
