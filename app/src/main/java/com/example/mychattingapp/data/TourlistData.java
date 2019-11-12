@@ -6,6 +6,11 @@ import androidx.annotation.Keep;
 public class TourlistData {
     String name;
     String uid;
+    String favor1;
+    String favor2;
+    String favor3;
+    String favor4;
+    String favor5;
     String latitude;
     String longitude;
 
@@ -22,6 +27,46 @@ public class TourlistData {
 
     public String getUid() {
         return uid;
+    }
+
+    public String getFavor1() {
+        return favor1;
+    }
+
+    public void setFavor1(String favor1) {
+        this.favor1 = favor1;
+    }
+
+    public String getFavor2() {
+        return favor2;
+    }
+
+    public void setFavor2(String favor2) {
+        this.favor2 = favor2;
+    }
+
+    public String getFavor3() {
+        return favor3;
+    }
+
+    public void setFavor3(String favor3) {
+        this.favor3 = favor3;
+    }
+
+    public String getFavor4() {
+        return favor4;
+    }
+
+    public void setFavor4(String favor4) {
+        this.favor4 = favor4;
+    }
+
+    public String getFavor5() {
+        return favor5;
+    }
+
+    public void setFavor5(String favor5) {
+        this.favor5 = favor5;
     }
 
     public void setUid(String uid) {

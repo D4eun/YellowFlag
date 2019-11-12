@@ -45,7 +45,7 @@ public class TouraccessusersActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return 0;
+            return 10;
         }
     }
 }

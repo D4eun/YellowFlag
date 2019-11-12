@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -41,7 +42,7 @@ public class AfterActivity extends AppCompatActivity {
         FirebaseDatabase.getInstance().getReference().child("users").child("after").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                recyclerView.setLayoutManager(new LinearLayoutManager(AfterActivity.this));
+                recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS));
                 recyclerView.setAdapter(new afterrecyclerviewAdapter());
             }
 
@@ -73,7 +74,7 @@ public class AfterActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return 0;
+            return 10;
         }
 
         private class AfterviewHolder extends RecyclerView.ViewHolder {

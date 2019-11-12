@@ -104,13 +104,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="290dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="Yellow Flag 별점:"
                 android:textSize="20dp" />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"/>
 
         </LinearLayout>
 
