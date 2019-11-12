@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MyChattingApp</string>
+    <string name="rc_color">splash_background</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="menu0">home</string>
+    <string name="menu1">map</string>
+    <string name="menu2">message</string>
+    <string name="menu3">search</string>
+    <string name="menu4">mypage</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_maps">Map</string>
+    <string name="naver_map_client_key">c10rjzips9</string>
+    <string name="naver_map_secret_key">zTVVyWy4HF5QancftUj3TVZvjWd3vjgxt3PMT61l</string>
+
+    <string name="activity_address">DaumPostcodeExample</string>
+    <string name="hint_address">주소를 입력하세요.</string>
+    <string name="hint_address_detail">주소 나머지 부분을 입력 하세요.</string>
+    <string name="msg_search_address">주소 검색</string>
+
+</resources>

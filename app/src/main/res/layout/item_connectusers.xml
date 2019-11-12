@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/connectusersitem_textview_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:text="아이디"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/connectusersitem_textview_userage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:text="나이"/>
+
+        <TextView
+            android:id="@+id/connectusersitem_textview_userlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/connectusersitem_textview_userage"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:text="지역"/>
+
+        <TextView
+            android:id="@+id/connectusersitem_textview_userfavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/connectusersitem_textview_userlocation"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:text="투어취향"/>
+
+        <TextView
+            android:id="@+id/connectusersitem_textview_toourdate"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="17dp"
+            android:text="2011.11.11 11:11"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SignupActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/signupActivity_edittext_email"
+            android:hint="이메일"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/signupActivity_edittext_name"
+            android:hint="닉네임"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/signupActivity_edittext_password"
+            android:hint="비밀번호(6자 이상)"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/signupActivity_edittext_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:minLines="2"
+                android:hint="@string/hint_address" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/msg_search_address"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="주소 등록"
+            android:id="@+id/latlngbutton"
+            android:layout_gravity="center_horizontal"
+            android:onClick="geoLocate"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- 가이드(YELLOW FLAG)로 자신있는 키워드를 작성해주세요!"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:textSize="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/signupActivity_edittext_favor1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"/>
+
+        <Button
+            android:id="@+id/signupActivity_edittext_plusfavor1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_toRightOf="@+id/signupActivity_edittext_favor1"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/signupActivity_linearlayout_favor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/signupActivity_edittext_favor2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"/>
+
+        <Button
+            android:id="@+id/signupActivity_edittext_plusfavor2"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_toRightOf="@+id/signupActivity_edittext_favor2"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/signupActivity_linearlayout_favor3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/signupActivity_edittext_favor3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"/>
+
+        <Button
+            android:id="@+id/signupActivity_edittext_plusfavor3"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_toRightOf="@+id/signupActivity_edittext_favor3"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/signupActivity_linearlayout_favor4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/signupActivity_edittext_favor4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"/>
+
+        <Button
+            android:id="@+id/signupActivity_edittext_plusfavor4"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_toRightOf="@+id/signupActivity_edittext_favor4"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/signupActivity_linearlayout_favor5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <EditText
+            android:id="@+id/signupActivity_edittext_favor5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:layout_toRightOf="@+id/signupActivity_edittext_favor5"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <Button
+        android:text="회원가입"
+        android:id="@+id/signupActivity_button_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>
